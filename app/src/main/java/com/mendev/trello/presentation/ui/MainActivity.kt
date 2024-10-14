@@ -1,4 +1,4 @@
-package com.mendev.trello.ui
+package com.mendev.trello.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.mendev.trello.ui.theme.DesafioTrelloTheme
+import com.mendev.trello.presentation.ui.theme.DesafioTrelloTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

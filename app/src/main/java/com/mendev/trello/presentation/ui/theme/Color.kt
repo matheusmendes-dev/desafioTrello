@@ -1,4 +1,4 @@
-package com.mendev.trello.ui.theme
+package com.mendev.trello.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
