@@ -3,5 +3,5 @@ plugins {
     alias(libs.plugins.androidApplication) apply false
     alias(libs.plugins.jetbrainsKotlinAndroid) apply false
     alias(libs.plugins.jetbrainsKotlinKapt) apply false
-    alias(libs.plugins.daggerHilt) apply false
+    alias(libs.plugins.googleDaggerHilt) apply false
 }
