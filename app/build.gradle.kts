@@ -23,8 +23,18 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "API_BASE_URL", "\"${System.getenv("TRELLO_API_BASE_URL")}\"")
+            buildConfigField("String", "API_KEY", "\"${System.getenv("TRELLO_API_KEY")}\"")
+            buildConfigField("String", "API_TOKEN", "\"${System.getenv("TRELLO_API_TOKEN")}\"")
+        }
         release {
             isMinifyEnabled = false
+
+            buildConfigField("String", "API_BASE_URL", "\"${System.getenv("TRELLO_API_BASE_URL")}\"")
+            buildConfigField("String", "API_KEY", "\"${System.getenv("TRELLO_API_KEY")}\"")
+            buildConfigField("String", "API_TOKEN", "\"${System.getenv("TRELLO_API_TOKEN")}\"")
+
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
