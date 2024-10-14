@@ -1,4 +1,4 @@
-package com.mendev.trello.data.network
+package com.mendev.trello.data.network.interceptors
 
 import com.mendev.trello.BuildConfig
 import okhttp3.Interceptor

@@ -1,7 +1,7 @@
 package com.mendev.trello.di.modules
 
 import com.mendev.trello.BuildConfig
-import com.mendev.trello.data.network.AuthInterceptor
+import com.mendev.trello.data.network.interceptors.AuthInterceptor
 import com.mendev.trello.data.network.TrelloApi
 import com.mendev.trello.helpers.NetworkHelper
 import dagger.Module
