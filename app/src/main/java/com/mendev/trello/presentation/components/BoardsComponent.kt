@@ -1,6 +1,7 @@
 package com.mendev.trello.presentation.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -24,7 +25,8 @@ import com.mendev.trello.presentation.ui.theme.DesafioTrelloTheme
 @Composable
 fun BoardsComponent(
     modifier: Modifier = Modifier,
-    items: List<Board>
+    items: List<Board>,
+    onBoardSelected: (board: Board) -> Unit
 ) {
     LazyColumn(
         modifier = modifier.padding(16.dp),
@@ -41,7 +43,8 @@ fun BoardsComponent(
 
             BoardItemComponent(
                 modifier = Modifier.fillMaxWidth()
-                    .background(backgroundColor),
+                    .background(backgroundColor)
+                    .clickable { onBoardSelected(board) },
                 text = board.name
             )
         }
@@ -86,6 +89,6 @@ private fun PreviewItems() {
     DesafioTrelloTheme {
         BoardsComponent(
             items = boards
-        )
+        ) {}
     }
 }

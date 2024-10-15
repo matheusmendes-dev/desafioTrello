@@ -21,6 +21,7 @@ import androidx.navigation.compose.rememberNavController
 import com.mendev.trello.common.components.MyScaffold
 import com.mendev.trello.domain.model.Board
 import com.mendev.trello.presentation.components.BoardsComponent
+import com.mendev.trello.presentation.ui.navigation.TrelloFlowGraph
 import com.mendev.trello.presentation.ui.theme.DesafioTrelloTheme
 import com.mendev.trello.presentation.viewmodels.BoardsViewModel
 
@@ -53,7 +54,13 @@ fun BoardsScreen(
                 val boards = (stateScreen as StateScreen.Success<List<Board>>).data
                 BoardsComponent(
                     modifier = Modifier.fillMaxSize(),
-                    items = boards
+                    items = boards,
+                    onBoardSelected = {
+                        val route = TrelloFlowGraph.ListRoute.route
+                            .replace("{${TrelloFlowGraph.ListRoute.Args.BOARD_ID}}", it.id)
+
+                        navController.navigate(route)
+                    }
                 )
             }
             is StateScreen.Error -> {
