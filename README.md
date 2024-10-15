@@ -5,6 +5,7 @@ A idéia deste aplicativo é permitir visualizar informações de boards e cards
 ## Funcionalidades
 
 - Listagem de boards do usuário
+- Background dos cards são setados conforme escolhido em sua conta do Trell 
 
 ## Tecnologias Utilizadas
 
@@ -71,6 +72,16 @@ Para acessar as informações de boards, é necessário configurar a autenticaç
 
 ## Melhorias Futuras ##
 
+- Melhorias na UX/UI do aplicativo.
 - Implementar caching de dados para uso offline.
 - Suporte para editar e criar novos cards.
 - Notificações push para alterações em boards e cards.
+
+## Demonstração
+
+https://github.com/user-attachments/assets/78d7681f-7d6b-45dc-b198-e31f6c1ac946
+
+
+![image](https://github.com/user-attachments/assets/59304b0d-60db-4000-962e-8f33e8b81836)
+
+
