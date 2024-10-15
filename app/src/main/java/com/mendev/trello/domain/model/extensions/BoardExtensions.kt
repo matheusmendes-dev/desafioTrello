@@ -10,5 +10,6 @@ private fun BoardEntity.toModel() =
     Board(
         id = id,
         name = name,
-        closed = closed
+        closed = closed,
+        backgroundColor = prefs.backgroundColor
     )

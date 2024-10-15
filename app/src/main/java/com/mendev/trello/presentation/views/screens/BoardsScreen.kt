@@ -20,7 +20,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.mendev.trello.common.components.MyScaffold
 import com.mendev.trello.domain.model.Board
-import com.mendev.trello.presentation.components.ListItemDataComponent
+import com.mendev.trello.presentation.components.BoardsComponent
 import com.mendev.trello.presentation.ui.theme.DesafioTrelloTheme
 import com.mendev.trello.presentation.viewmodels.BoardsViewModel
 
@@ -51,9 +51,9 @@ fun BoardsScreen(
             }
             is StateScreen.Success -> {
                 val boards = (stateScreen as StateScreen.Success<List<Board>>).data
-                ListItemDataComponent(
+                BoardsComponent(
                     modifier = Modifier.fillMaxSize(),
-                    items = boards.map { it.name }
+                    items = boards
                 )
             }
             is StateScreen.Error -> {
