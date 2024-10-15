@@ -1,4 +1,4 @@
-package com.mendev.trello.presentation.views.components
+package com.mendev.trello.common.components
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack

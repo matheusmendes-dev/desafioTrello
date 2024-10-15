@@ -1,4 +1,4 @@
-package com.mendev.trello.presentation.views.components
+package com.mendev.trello.common.components
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
