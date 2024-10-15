@@ -86,6 +86,8 @@ dependencies {
     implementation(libs.google.code.gson)
 
     testImplementation(libs.junit)
+    testImplementation(libs.test.mockk)
+    testImplementation(libs.test.coroutines)
 
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)

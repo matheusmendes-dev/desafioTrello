@@ -13,7 +13,7 @@ data class BoardEntity(
     val closed: Boolean,
 
     @SerializedName("prefs")
-    val prefs: Prefs
+    val prefs: Prefs?
 ) {
     data class Prefs(
         @SerializedName("backgroundColor")
