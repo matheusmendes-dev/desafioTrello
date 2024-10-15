@@ -1,9 +1,10 @@
 package com.mendev.trello.di.modules
 
 import com.mendev.trello.BuildConfig
-import com.mendev.trello.data.network.interceptors.AuthInterceptor
 import com.mendev.trello.data.network.TrelloApi
-import com.mendev.trello.helpers.NetworkHelper
+import com.mendev.trello.data.network.interceptors.AuthInterceptor
+import com.mendev.trello.helpers.getLoggingInterceptor
+import com.mendev.trello.helpers.getOkHttpClientBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -36,7 +37,7 @@ object NetworkModule {
         authInterceptor: AuthInterceptor,
         loggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient {
-        val okHttpClient = NetworkHelper.getOkHttpClientBuilder()
+        val okHttpClient = getOkHttpClientBuilder()
         okHttpClient.addInterceptor(loggingInterceptor)
         okHttpClient.addInterceptor(authInterceptor)
 
@@ -44,6 +45,6 @@ object NetworkModule {
     }
 
     @Provides
-    fun provideLoggingInterceptor() = NetworkHelper.getLoggingInterceptor(BuildConfig.DEBUG)
+    fun provideLoggingInterceptor() = getLoggingInterceptor(BuildConfig.DEBUG)
 
 }
